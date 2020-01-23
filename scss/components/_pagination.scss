@@ -1,0 +1,40 @@
+.pagination {
+  margin-top: 20px;
+
+  .page-item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &:first-child,
+    &:last-child {
+      border: 1px solid #ccc;
+      border-radius: 50%;
+    }
+
+    & > .page-link {
+      @include flex-center;
+      height: 40px;
+      width: 40px;
+      border: none;
+      border-radius: 50%;
+      overflow: hidden;
+      outline: none;
+      background: none;
+
+      &:hover {
+        background: #ccc;
+      }
+    }
+  }
+
+  /*  // left arrow
+  & > .page-item:first-child {
+    border: 2px solid red;
+  }
+
+  // right arrow
+  & > .page-item:last-child {
+    border: 2px solid red;
+  } */
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Assampapers | blog</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/vendor/bootwatch/bootwatch.css" />
+    <link
+      rel="stylesheet"
+      href="assets/vendor/font-awesome/css/font-awesome.css"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- ckeditor default style overwrite -->
+    <style>
+      #editor {
+        background: var(--ck-sample-color-white);
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+        border: 1px solid #dfe4e6;
+        border-bottom-color: #cdd0d2;
+        border-right-color: #cdd0d2;
+      }
+
+      .ck.ck-editor {
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      .ck.ck-content {
+        font-family: "Merriweather", serif;
+        margin-bottom: 0.8em;
+        min-height: 100vh;
+        min-width: 90%;
+        width: 100%;
+        padding: 1.5em 2em;
+      }
+
+      .ck.ck.ck-content h1,
+      .ck.ck.ck-content h2,
+      .ck.ck.ck-content h3 {
+        font-weight: 500;
+        padding-bottom: 15px;
+        padding-top: 15px;
+      }
+
+      .ck.ck.ck-content h1 {
+        font-size: 4rem;
+      }
+      .ck.ck.ck-content h2 {
+        font-size: 3.5rem;
+      }
+      .ck.ck.ck-content h1 {
+        font-size: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <!--Navbar-->
+      <nav class="navbar navbar-expand-md mb-4">
+        <div class="container">
+          <!-- Navbar brand -->
+          <a class="navbar-brand" href="#">Assampapers</a>
+
+          <!-- Collapse button -->
+          <button
+            class="navbar-toggler humburger-button"
+            type="button"
+            data-toggle="collapse"
+            data-target="#main-nav"
+            aria-controls="main-nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <div class="animated-icon">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </button>
+
+          <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="papers.html">Papers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--/.Navbar-->
+    </header>
+
+    <div class="container">
+      <main class="blog__creation">
+        <div
+          class="blog__creation--btn d-flex align-content-center justify-content-end mb-3"
+        >
+          <button class="btn btn-info btn-lg mr-3 py-3 px-5">
+            Save as draft
+          </button>
+          <button id="publishdBtn" class="btn btn-success btn-lg py-3 px-5">
+            Publish
+          </button>
+        </div>
+        <!-- Article Creation Form -->
+        <div id="editor">
+          <h1>The 7 Most Popular DEV Posts from the Past Week</h1>
+          <p>
+            Every Monday we round up the previous week's top posts based on
+            traffic, engagement, and a hint of editorial curation......
+          </p>
+        </div>
+      </main>
+    </div>
+
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/popper_js/popper.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="assets/vendor/ckeditor5/ckeditor.js"></script> -->
+    <script src="assets/js/index.js"></script>
+    <script src="assets/dist/bundle.js"></script>
+  </body>
+</html>

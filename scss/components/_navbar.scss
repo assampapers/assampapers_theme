@@ -1,0 +1,110 @@
+.navbar {
+  background: #fbfbfb;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ddd;
+
+  &-brand {
+    color: $dark;
+
+    &:hover {
+      color: lighten($dark, 10%);
+    }
+  }
+
+  &-nav {
+    color: $dark;
+
+    & li:not(:last-child) {
+      margin-right: 5px;
+    }
+
+    a {
+      color: inherit;
+    }
+  }
+}
+
+.animated-icon {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  margin: 0px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+
+  span {
+    background: $golden;
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+
+    &:nth-child(1) {
+      top: 0px;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      top: 10px;
+    }
+
+    &:nth-child(4) {
+      top: 20px;
+    }
+  }
+
+  &.open {
+    span:nth-child(1) {
+      top: 11px;
+      width: 0%;
+      left: 50%;
+    }
+
+    span:nth-child(2) {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    span:nth-child(3) {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+
+    span:nth-child(4) {
+      top: 11px;
+      width: 0%;
+      left: 50%;
+    }
+  }
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}

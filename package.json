@@ -1,0 +1,41 @@
+{
+  "name": "assampapers_theme",
+  "version": "1.0.0",
+  "description": "assampapers frontend theme",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf assets/css/main.css",
+    "compile": "node-sass --output-style=expanded --source-map=true scss/main.scss assets/css/main.css",
+    "prefix": "postcss assets/css/main.css --use=autoprefixer --map=false --output=assets/css/main.prefix.css",
+    "minify": "cleancss --level=1 --source-map --source-map-inline-sources --output assets/css/main.css assets/css/main.prefix.css",
+    "watch:sass": "npm run compile -- --watch",
+    "build": "npm run clean && npm run compile && npm run prefix && npm run minify",
+    "serve": "live-server",
+    "watch:js": "webpack --watch",
+    "webpack": "webpack",
+    "start": "concurrently \"npm run watch:sass\" \"npm run serve\" "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "autoprefixer": "^9.7.4",
+    "babel-loader": "^8.0.6",
+    "clean-css-cli": "^4.3.0",
+    "concurrently": "^5.0.2",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.13.1",
+    "postcss-cli": "^7.1.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "dependencies": {
+    "@ckeditor/ckeditor5-autosave": "^16.0.0",
+    "@ckeditor/ckeditor5-build-balloon-block": "^16.0.0"
+  }
+}

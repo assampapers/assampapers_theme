@@ -1,0 +1,76 @@
+.blog__list {
+  @include content-top-margin;
+
+  .blog {
+    margin-bottom: 50px;
+  }
+}
+
+.blog {
+  &__thumbnail img {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  &__info {
+    justify-content: space-between;
+    color: #999;
+
+    .avatar {
+      max-width: 50px;
+      min-width: 50px;
+      height: 50px;
+      overflow: hidden;
+      border-radius: 50%;
+      margin-right: 10px;
+      border: 2px solid $golden;
+    }
+
+    .author {
+      margin-right: 5px;
+      color: inherit;
+    }
+
+    i {
+      color: $golden;
+      margin-right: 5px;
+    }
+  }
+
+  &__heading {
+    color: #555;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-bottom: 1rem;
+
+    &:hover {
+      color: #222;
+    }
+  }
+
+  &__overview {
+    color: #222;
+    @extend %text-justify;
+  }
+}
+
+.badge {
+  border-radius: 2px;
+  padding: 3px 9px;
+  margin-bottom: 5px;
+  color: $light;
+
+  &:not(:last-child) {
+    margin-right: 5px;
+  }
+}
+
+/* Latest Posts Section Media Query ------------------------------------- */
+@media (max-width: 767px) {
+  .blog {
+    margin-bottom: 40px;
+  }
+  .blog:last-of-type {
+    margin-bottom: 0;
+  }
+}

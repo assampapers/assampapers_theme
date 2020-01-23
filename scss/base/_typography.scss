@@ -1,0 +1,124 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: $font-weight-normal;
+  letter-spacing: 1px;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+blockquote {
+  color: $dark;
+  background: lighten($golden, 20%);
+  border-left: 10px solid $golden;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+
+  &::before {
+    color: $light;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+
+  p {
+    display: inline;
+  }
+
+  footer {
+    text-align: right;
+  }
+}
+
+.badge {
+  font-weight: $font-weight-light;
+}
+
+.navbar {
+  &-brand {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+  }
+
+  &-nav {
+    font-weight: 700;
+  }
+}
+
+.blog {
+  &__info {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+  }
+
+  &__heading {
+    font-size: 2.5rem;
+    font-weight: $font-weight-bold;
+
+    &--primary {
+      font-size: 4rem;
+      letter-spacing: 1.5px;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &__body {
+    h1,
+    h2,
+    h3 {
+      font-weight: 500;
+      padding-bottom: 15px;
+      padding-top: 15px;
+    }
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    h2 {
+      font-size: 3.5rem;
+    }
+
+    h3 {
+      font-size: 3rem;
+    }
+  }
+}
+
+.article__single {
+  .blog__heading--primary,
+  .blog__body {
+    font-family: "Merriweather", serif;
+  }
+
+  .blog__body {
+    font-size: 1.8rem;
+  }
+}
+
+.aside_heading {
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  text-align: center;
+}

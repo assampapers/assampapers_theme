@@ -1,0 +1,27 @@
+%text-justify {
+  text-align: justify;
+}
+
+@mixin first-letter {
+  color: $golden;
+  float: left;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 75px;
+  line-height: 3rem;
+  padding-top: 4px;
+  padding-right: 8px;
+}
+
+@mixin content-top-margin {
+  margin-top: 50px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@mixin flex-center($flex-direction: row) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
