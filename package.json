@@ -29,7 +29,7 @@
     "node-sass": "^4.13.1",
     "postcss-cli": "^7.1.0",
     "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.12"
   },
   "browserslist": [
     "last 2 versions"
